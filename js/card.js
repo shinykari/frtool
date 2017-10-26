@@ -1,7 +1,7 @@
 FRTool.initFR(FRData);
-var DEFAULT_FONT = "14pt serif";
+var DEFAULT_FONT = "14pt Arial";
 var DEFAULT_BACKGROUND = "transparent";
-var DEFAULT_NAME_FONT = "24pt serif";
+var DEFAULT_NAME_FONT = "24pt Arial";
 
 function getRandomNumber(range) {
     return range[Math.floor(Math.random() * range.length)];
