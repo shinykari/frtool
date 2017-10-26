@@ -1,7 +1,7 @@
 FRTool.initFR(FRData);
-var DEFAULT_FONT = "14pt cursive";
+var DEFAULT_FONT = "14pt serif";
 var DEFAULT_BACKGROUND = "transparent";
-var DEFAULT_NAME_FONT = "24pt cursive";
+var DEFAULT_NAME_FONT = "24pt serif";
 
 function getRandomNumber(range) {
     return range[Math.floor(Math.random() * range.length)];
@@ -127,7 +127,7 @@ function drawColorRange(canvasContext, range, lineColor, y) {
 
 function drawGene(canvasContext, font, gene1, gene2, color, leftcolor, rightcolor, y) {
     var width = 80;
-    var imgWidth = 640;
+    var imgWidth = 525;
     canvasContext.font = font || DEFAULT_FONT;
         if (gene1 == gene2) {
             canvasContext.textAlign = "center";
@@ -149,7 +149,7 @@ function drawGene(canvasContext, font, gene1, gene2, color, leftcolor, rightcolo
 
 function drawBreed(canvasContext, font, breed1, breed2, color, leftcolor, rightcolor, y) {
     var width = 80;
-    var imgWidth = 640;
+    var imgWidth = 525;
     canvasContext.font = font || DEFAULT_FONT;
         if (breed1 == breed2) {
             canvasContext.textAlign = "center";
@@ -171,15 +171,15 @@ function drawBreed(canvasContext, font, breed1, breed2, color, leftcolor, rightc
 
 function drawCard(canvasId, cardData) {
     var canvas = document.getElementById(canvasId);
-    canvas.setAttribute('width', '640');
+    canvas.setAttribute('width', '525');
     canvas.setAttribute('height', '240');
     var canvasContext = canvas.getContext("2d");
-    canvasContext.clearRect(0, 0, 640, 240);
+    canvasContext.clearRect(0, 0, 525, 240);
 
 
     // background
     canvasContext.fillStyle = cardData.background || DEFAULT_BACKGROUND;
-    canvasContext.fillRect(0, 0, 640, 240);
+    canvasContext.fillRect(0, 0, 525, 240);
 
     // breed
     drawBreed(canvasContext, cardData.geneFont, 
