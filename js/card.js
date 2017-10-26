@@ -110,7 +110,7 @@ function drawColorRange(canvasContext, range, lineColor, y) {
         single -= 1;
         width = range.length * (single + 1);
     } while (width > 200);
-    var startX = 320 - width / 2;
+    var startX = 262 - width / 2;
     for (var i = 0; i < range.length; i++) {
         canvasContext.lineWidth = "2";
         canvasContext.strokeStyle = lineColor;
@@ -230,7 +230,7 @@ function drawCard(canvasId, cardData) {
 
     // image 2
     drawImage(canvasContext, getImgUrl(cardData.dragon2.id, true), 
-        400, 0, 240, 240, cardData.dragon2.imgflip, 
+        300, 0, 240, 240, cardData.dragon2.imgflip, 
         function(){
             if (cardData.dragonName.enable) {
                 drawName(canvasContext, 
